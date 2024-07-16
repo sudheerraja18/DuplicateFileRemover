@@ -6,7 +6,7 @@ import os
 
 def hashFile(filename):
     # For large files, if we read it all together it can lead to memory overflow, So we take a blocksize to read at a time
-    BLOCKSIZE = 65536
+    BLOCKSIZE = 1024
     hasher = hashlib.md5()
     with open(filename, 'rb') as file:
         # Reads the particular blocksize from file
